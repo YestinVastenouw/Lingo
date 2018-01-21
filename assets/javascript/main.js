@@ -7,7 +7,7 @@
     var checkpoints = [5, 10, 15, 20, 25]
 
     var alphabet = {}
-
+    
     function fillAlphabet () {
         this.alphabet = {}
         for (var i = 0; i < this.word.length; i++) {
@@ -60,19 +60,13 @@
         }
 
         this.updateRow()
-        if (userGuess == this.word) {
-            // User has guessed the word and thereby won the game. 
+        if (userGuess == this.word)
             return
-        }
 
-        userGuess = ''
         this.attempts++
-
-        if (this.attempts == 5) {
-            // User has reached the maximum amount of attempts to guess the word.
+        if (this.attempts == 5)
             return;
-        }
-
+    
         this.updateSlots()
     }
 
