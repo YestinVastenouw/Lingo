@@ -40,8 +40,8 @@
         for (var i = (this.attempts * 5); i < (this.attempts * 5) + 5; i++) {
             this.slots[i].readOnly = false            
 
-            for (var j = 0; j < this.checkpoints.length; j++) {
-                if (i == this.checkpoints[j]) {
+            for (var j = 0; j < checkpoints.length; j++) {
+                if (i == checkpoints[j]) {
                     this.slots[i].classList.add('red')
                     this.slots[i].value = this.word.charAt(0)
                     continue
