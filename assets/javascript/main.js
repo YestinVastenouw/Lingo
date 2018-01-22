@@ -4,8 +4,6 @@
     var attempts = 0
 
     var word = words[this.Math.floor(this.Math.random() * words.length)]
-    var checkpoints = [5, 10, 15, 20, 25]
-
     var alphabet = {}
     
     function fillAlphabet () {
@@ -35,6 +33,7 @@
     })()
 
     function updateSlots () {
+        var checkpoints = [5, 10, 15, 20, 25]
         for (var i = (this.attempts - 1) * 5; i < this.attempts * 5; i++)
             this.slots[i].readOnly = true
 
