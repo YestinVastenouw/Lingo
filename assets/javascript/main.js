@@ -5,7 +5,7 @@
 
     var word = words[this.Math.floor(this.Math.random() * words.length)]
     var alphabet = {}
-    
+
     function fillAlphabet () {
         this.alphabet = {}
         for (var i = 0; i < this.word.length; i++) {
@@ -65,7 +65,7 @@
         this.attempts++
         if (this.attempts == 5)
             return;
-    
+
         this.updateSlots()
     }
 
@@ -77,7 +77,8 @@
                 this.alphabet[this.slots[i].value] -= 1
                 continue
             }
-            
+        }
+        for (var i = this.attempts * 5; i < (this.attempts + 1) * 5; i++) {
             for (var j = 0; j < wordCopy.length; j++) {
                 if (this.slots[i].value == wordCopy.charAt(j) && this.alphabet[wordCopy.charAt(j)] != 0) {
                     this.slots[i].classList.add('yellow')
